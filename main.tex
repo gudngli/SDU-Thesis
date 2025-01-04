@@ -1,0 +1,199 @@
+% !TEX program = xelatex
+
+%% main.tex
+%% Copyright 2025 Guodong Li
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Guodong Li.
+%
+% This work consists of the files sdu-thesis.cls main.tex
+
+\documentclass{settings/sdu-thesis}
+%\input{settings}
+
+% 论文信息
+\input{chapters/info.tex}
+
+\begin{document}
+
+\maketitlepagestatement
+
+% 中文目录 和 英文目录
+\content
+
+\input{chapters/abstract}
+
+% 插图目录 和 表格目录
+\ftcontent
+
+\chapter{模板使用示例}
+\echapter{Template Usage Example}
+\section{模板下载}
+\esection{Template Download}
+你可以从以下网址下载本模板：\url{https://github.com/gudngli/SDU-Thesis}。
+
+\section{基本结构}
+\esection{Basic Structure}
+本模板的基本结构如下：
+\begin{itemize}
+    \item settings/：模板设置文件夹，包含论文的格式设置。
+    \item main.tex：主文件，包含论文的整体结构。
+    \item chapters/：章节文件夹，包含各个章节的内容。
+    \item ref.bib：参考文献文件，包含所有引用的文献信息。使用cite命令引用参考文献，例如\cite{MSR-TIT24}。
+\end{itemize}
+
+\section{编译方法}
+\esection{Compilation Method}
+使用以下命令编译论文：
+    \begin{verbatim}
+        xelatex main.tex
+        bibtex main.aux
+        xelatex main.tex
+        xelatex main.tex
+    \end{verbatim}
+或者
+\begin{itemize}
+    \item Windows：使用 TeX Live 或 MiKTeX 编译。
+    \item MacOS：使用 MacTeX 编译。(或者终端运行``make''命令)
+\end{itemize}
+本文档已经在 TeXlive 2023 上测试通过。
+
+\section{选项说明}
+\esection{Options Description}
+
+\begin{itemize}
+    \item \texttt{[double]}: 双面打印。此时所有章节的首页都在奇数页，另外，页面边距也会有所调整，内侧边距比外侧边距大。以便装订。
+    \item \texttt{[fzfont]}: 使用方正字体。默认使用的是宋体，如需在论文首页使用方正字体，请添加此选项。使用前确保自己的电脑上已经安装了``方正粗黑宋简体''字体。
+    该字体的安装文件可以在settings文件夹下找到。
+    \item \texttt{[print]}: 使用该选项时所有链接的颜色都会被设置为黑色。
+\end{itemize}
+
+\section{论文标题，作者信息设置}
+\esection{Thesis Title, Author Information Setting}
+在 \texttt{./chapters/info.tex} 文件中，你可以设置论文的标题，作者信息等。
+
+
+\section{插入图片}
+\esection{Insert Picture}
+插入图片的示例代码如下：
+\begin{verbatim}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{settings/logo.pdf}
+        \caption[SDUlogo]{山东大学校徽}
+        \label{fig:sdulogo}
+    \end{figure}
+\end{verbatim}
+效果如下，请留意插图目录的变化：
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{settings/logo.pdf}
+    \caption[SDUlogo]{山东大学校徽}
+    \label{fig:sdulogo}
+\end{figure}
+
+\section{插入表格}
+\esection{Insert Table}
+插入表格的示例代码如下：
+\begin{verbatim}
+    \begin{table}[h]
+        \centering
+        \label{tab:sdulogo}
+        \begin{tabular}{|c|c|}
+            \hline
+            山东大学 & 校徽 \\
+            \hline
+            山东大学 & 校徽 \\
+            \hline
+        \end{tabular}
+        \caption{山东大学校徽}
+    \end{table}
+\end{verbatim}
+效果如下，请留意表格目录的变化：
+\begin{table}[h]
+    \centering
+    \label{tab:sdulogo}
+    \begin{tabular}{|c|c|}
+        \hline
+        山东大学 & 校徽 \\
+        \hline
+        山东大学 & 校徽 \\
+        \hline
+    \end{tabular}
+    \caption{山东大学校徽}
+\end{table}
+
+一个稍微复杂的表格示例：
+\begin{table}[ht]
+    \centering
+    \renewcommand{\arraystretch}{1}
+    \begin{tabular}{|l|l|c|}
+        \hline
+        \multicolumn{3}{|c|}{Optimal-access}                                                                       \\
+        \hline
+        \hline
+        Codes                      & Sub-packetization $\ell$                                    & Restrictions    \\
+        \hline
+        \cite[Section VIII]{Ye16}  & $s^{n-1}$                                                   &                 \\
+        \hline
+        \cite{CB}                  & $s^{n}$                                                     &                 \\
+        \hline
+        \cite{Liu22}               & $s^{\left\lceil n/2 \right\rceil}$                          &                 \\
+        \hline
+        \cite{Vajha21}             & $s^{\left\lceil n/s \right\rceil}$      (smallest possible) & $s\in\{2,3,4\}$ \\
+        \hline
+        %Section~\ref{sect:code1}   & $s^{\left\lceil n/s \right\rceil}$      (smallest possible) &                 \\
+        %\hline
+        \multicolumn{3}{c}{}                                                                                       \\
+        \hline
+        \multicolumn{3}{|c|}{Not optimal-access}                                                                   \\
+        \hline
+        \hline
+        Codes                      & Sub-packetization $\ell$                                    & Restrictions    \\
+        \hline
+        \cite[Section IV]{Ye16}    & $s^{n}$                                                     &                 \\
+        \hline
+        \cite{LWHY22}              & $s^{\left\lceil n/3 \right\rceil}$      (best-known)        & $d=k+1$         \\
+        \hline
+        \cite{Zhang23} \cite{Li23} & $s^{\left\lceil n/2 \right\rceil}$                          &                 \\
+        \hline
+        %Section~\ref{sect:code2}   & $s^{\left\lceil n/(s+1) \right\rceil}$    (best-known)      &                 \\
+        %\hline
+        %\multicolumn{3}{c}{}
+    \end{tabular}
+    \caption[MSR码的显式构造]{Explicit $(n,k)$ MSR code constructions with linear field size and $d<n-1$ helper nodes, where $s=d-k+1$.
+        ``smallest possible'' means that $\ell$ achieves the theoretical lower bound; ``best-known'' means that $\ell$ is the smallest among all the existing constructions.}
+    \label{tab:cmp}
+\end{table}
+
+% 参考文献
+\references
+\bibliographystyle{plain}
+\bibliography{ref}
+
+% 致谢
+\input{chapters/acknowledgment}
+
+% 博士期间所发论文
+\input{chapters/publications}
+
+% 博士期间所获奖项
+\input{chapters/awards}
+
+% 学位论文评阅及答辩情况表
+%\comments
+%\begin{figure*}[htp]
+%	\centering
+%	\includegraphics[scale=0.82]{./contents/table.eps}
+%\end{figure*}
+
+\end{document}
