@@ -40,7 +40,7 @@
 		{\includegraphics[width=0.625\textwidth]{settings/logo.pdf}}\\[3mm]
 		{\scalebox{4}{\fzbHei{}\the\CThesisType}}\\[4mm]
 		{\scalebox{1.3}{\fzbHei{}\the\EThesisType}}\\
-            {\heiti{} \the\DegreeType}
+		{\heiti{} \the\DegreeType}
 		}
 		%\par \vskip 15mm \relax
 		{     \begin{center}
