@@ -17,7 +17,7 @@
 
 % ===== 导言部分 =====
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
-\ProvidesClass{sdu-thesis}
+\ProvidesClass{settings/sdu-thesis}
 
 % ==== 基本文档类 ====
 \AddToHook{package/xeCJK/after}{\defaultCJKfontfeatures{}}
