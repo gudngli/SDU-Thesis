@@ -139,18 +139,34 @@
 
 \newcommand{\spaces}{\texorpdfstring{\quad{}}{}}
 \usepackage{indentfirst} % 使得章节后的第一段缩进
-\setlength{\parindent}{2em} \ctexset{ figurename={图}, tablename={表}, bibname={参考文献},
-	contentsname={目\spaces{}录}, chapter = {% 设置缩进为2个汉字
-	  %name = {第, 章},
-	  name = {},
-	  %number = \chinese{chapter},
-	  format = \centering, nameformat = {\bfseries\zihao{-3}}, titleformat =
-		  {\bfseries\zihao{-3}}, aftername = \quad, beforeskip = 10pt, afterskip = 10pt,
-	  afterindent = true }, section = { format = {\bfseries\flushleft\zihao{4}} },
-	subsection = { format = {\bfseries\flushleft\zihao{-4}} }, subsubsection = {
-			format = {\flushleft\zihao{-4}} }, appendix = {
+\setlength{\parindent}{2em}
+	\ctexset{
+		figurename={图},
+		tablename={表},
+		bibname={参考文献},
+		contentsname={目\spaces{}录},
+		chapter = {
+			% 设置缩进为2个汉字
+	  		%name = {第, 章},
+	  		name = {},
+	  		%number = \chinese{chapter},
+	  		format = \centering,
+			nameformat = {\bfseries\zihao{-3}},
+			titleformat = {\bfseries\zihao{-3}},
+			aftername = \quad,
+			beforeskip = 10pt,
+			afterskip = 10pt,
+	  		afterindent = true
+		},
+		section = { format = {\bfseries\flushleft\zihao{4}} },
+		subsection = { format = {\bfseries\flushleft\zihao{-4}} },
+		subsubsection = {format = {\flushleft\zihao{-4}} },
+		appendix = {
 			%name = {附录~},
-			name = {}, number = \Alph{chapter} }, today = small }
+			name = {},
+			number = \Alph{chapter} },
+		today = small
+	}
 
 % ---- 英文标题 ----
 \newcommand\echapter[1]{\addengcontents{chapter}{#1}}
