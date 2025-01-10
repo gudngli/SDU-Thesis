@@ -28,8 +28,8 @@
 \newcommand{\maketitlepage}{%
 	\thispagestyle{empty}
 	\begin{flushleft}
-		\TopTitleLeft{分类号}：~~\TopTitleRight{\the\fenlei}\hfill\TopTitleLeft{单位代码}：~~\TopTitleRight{\the\DWdaihao}\\
-		\TopTitleLeft{密级}：~~\TopTitleRight{\the\miji}\hfill\TopTitleLeft{学号}：~~\TopTitleRight{\the\StuNum}
+		\TopTitleLeft{分~类~号}：~~\TopTitleRight{\the\fenlei}\hfill\TopTitleLeft{单位代码}：~~\TopTitleRight{\the\DWdaihao}\\
+		\TopTitleLeft{密~~~级}：~~\TopTitleRight{\the\miji}\hfill\TopTitleLeft{学~~~号}：~~\TopTitleRight{\the\StuNum}
 	\end{flushleft}
 
 	\begin{center}
