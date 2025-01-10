@@ -20,10 +20,10 @@
 \RequirePackage{makecell}
 \newcommand{\LeftLength}{2.3cm}
 \newcommand{\RightLength}{5.5cm}
-\newcommand{\Mcs}[1]{\makebox[\LeftLength][s]{{\zihao{3}\bfseries\songti{}#1}}}
-\newcommand{\Mcc}[1]{\makebox[\RightLength][c]{{\zihao{-3}\heiti{}#1}}}
-\newcommand{\TopTitleLeft}[1]{\makebox[2cm][s]{{\zihao{4}\bfseries\songti{}#1}}}
-\newcommand{\TopTitleRight}[1]{\makebox[2.5cm][l]{{\zihao{4}\heiti{}#1}}}
+\newcommand{\Mcs}[1]{\makebox[\LeftLength][s]{{\bfseries\zihao{3} #1}}}
+\newcommand{\Mcc}[1]{\makebox[\RightLength][c]{{\bfseries\zihao{-3} #1}}}
+\newcommand{\TopTitleLeft}[1]{\makebox[2cm][s]{{\bfseries\zihao{4} #1}}}
+\newcommand{\TopTitleRight}[1]{\makebox[2.5cm][l]{{\bfseries\zihao{4} #1}}}
 
 \newcommand{\maketitlepage}{%
 	\thispagestyle{empty}
@@ -45,7 +45,7 @@
 		%\par \vskip 15mm \relax
 		{     \begin{center}
 			%\begin{flushleft}
-			{\zihao{3}\songti{}论文题目：}
+			{\zihao{3} 论文题目：}
 			\zihao{3}\heiti\the\Ctitle\\
 		\end{center}
 		%\end{flushleft}
@@ -55,7 +55,7 @@
 		%	\noindent
 		%	\zihao{-1}\heiti\the\Ctitle\\
 		\vskip 2mm
-		\zihao{-3}\songti\the\Etitle
+		\zihao{-3} \the\Etitle
 		}
 		\vfill
 		{
@@ -71,7 +71,7 @@
 		}
 		\par \vskip 20mm \relax
 		{
-			\zihao{3}\the\Cdate
+			\bfseries\zihao{3} \the\Cdate
 		}
 	\end{center}
 }
