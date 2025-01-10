@@ -96,6 +96,11 @@
 \fi
 \makeatother
 
+% ==== 字体设置 ====
+\RequirePackage{silence}
+\WarningFilter{latexfont}{Font}
+\WarningFilter{latexfont}{Size substitutions with differences}
+
 % ==== 行距和段落间距 ====
 \linespread{1.3}
 \addtolength{\parskip}{.3ex}
