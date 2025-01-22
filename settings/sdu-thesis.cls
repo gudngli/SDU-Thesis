@@ -206,6 +206,7 @@
 	\cleartochapter
 	\makestatement
 	\cleartochapter
+	\pagenumbering{roman}
 	\setcounter{page}{1}
 }
 
@@ -234,7 +235,7 @@
 
 \makeatletter
 \newcommand{\maketableofcontents}{%
-	\pagenumbering{roman}
+	%\pagenumbering{roman}
 	\tableofcontents
 }
 \makeatother
