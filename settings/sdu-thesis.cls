@@ -67,14 +67,16 @@
 
 % ==== 交叉引用 ====
 \RequirePackage{hyperref}
+\RequirePackage{xcolor}
 \hypersetup{
 	unicode=true,
 	colorlinks=true,
-	linkcolor=blue,
-	citecolor=red,
-	urlcolor=red,
+	linkcolor={blue!90!black},
+  	citecolor={red!70!black},
+  	urlcolor={blue!70!black},
 	anchorcolor=blue
 }
+
 \makeatletter
 \ifSST@opt@print
 	\hypersetup{allcolors=black}
